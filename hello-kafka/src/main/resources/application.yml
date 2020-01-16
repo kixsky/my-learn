@@ -1,0 +1,16 @@
+spring:
+  kafka:
+    bootstrapServers: 123.56.249.169:9092
+    consumer:
+      group-id: my
+      auto-offset-reset: latest
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.gpmall.user.*
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
